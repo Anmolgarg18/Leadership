@@ -160,7 +160,7 @@
   </h3>
 
   <!-- Legend -->
- <div class="mt-4 flex justify-end">
+ <div class="my-10 flex justify-end">
   <div>
     <h3 class="text-sm font-semibold mb-2 text-gray-700 text-right">Legend</h3>
     <div class="text-sm text-gray-700 flex items-center space-x-3 flex-wrap">
@@ -405,38 +405,38 @@ document.addEventListener('DOMContentLoaded', () => {
     const chartdata = [
       {
         skill: "BUSINESS & FINANCIAL ACUMEN",
-        ae: { gap: 20, mid: 30, strength: 50 },
-        dir: { gap: 20, mid: 30, strength: 50 }
+        ae: { gap: 50, mid: 30, strength: 50 },
+        dir: { gap: 50, mid: 30, strength: 20 }
       },
       {
         skill: "ANALYSIS TO INSIGHTS",
-        ae: { gap: 15, mid: 45, strength: 40 },
-        dir: { gap: 15, mid: 45, strength: 40 }
+        ae: { gap: 40, mid: 45, strength: 15 },
+        dir: { gap: 40, mid: 45, strength: 15 }
       },
       {
         skill: "BRAND & PORTFOLIO VALUE",
-        ae: { gap: 10, mid: 40, strength: 50 },
-        dir: { gap: 10, mid: 40, strength: 50 }
+        ae: { gap: 50, mid: 40, strength: 10 },
+        dir: { gap: 50, mid: 40, strength: 10 }
       },
       {
         skill: "STAKEHOLDER ALIGNMENT",
-        ae: { gap: 12, mid: 38, strength: 50 },
-        dir: { gap: 6, mid: 34, strength: 60 }
+        ae: { gap: 50, mid: 38, strength: 12 },
+        dir: { gap: 60, mid: 34, strength: 6 }
       },
       {
         skill: "EFFECTIVE STORYTELLING",
-        ae: { gap: 5, mid: 55, strength: 40 },
-        dir: { gap: 4, mid: 26, strength: 70 }
+        ae: { gap: 40, mid: 55, strength: 5 },
+        dir: { gap: 70, mid: 26, strength: 7 }
       },
       {
         skill: "MARKET ACCESS",
-        ae: { gap: 8, mid: 42, strength: 50 },
-        dir: { gap: 3, mid: 30, strength: 67 }
+        ae: { gap: 50, mid: 42, strength: 8 },
+        dir: { gap: 67, mid: 30, strength: 3 }
       },
       {
         skill: "PERSONALIZED MARKETING",
-        ae: { gap: 10, mid: 50, strength: 40 },
-        dir: { gap: 5, mid: 35, strength: 60 }
+        ae: { gap: 40, mid: 50, strength: 10 },
+        dir: { gap: 60, mid: 35, strength: 5 }
       }
     ];
 
@@ -515,14 +515,14 @@ document.addEventListener('DOMContentLoaded', () => {
       html2pdf().from(element).set(opt).save();
     }
 
-    const skillsData = [
-      { label: "BUSINESS & FINANCIAL ACUMEN", self: 1.33, manager: 1, benchmark: 2,industrybenchmark  : 3 },
-      { label: "ANALYSIS TO INSIGHTS", self: 1.33, manager: 1, benchmark: 2,industrybenchmark  : 3 },
-      { label: "BRAND & PORTFOLIO VALUE", self: 1.67, manager: 1.6, benchmark: 2.5,industrybenchmark  : 3 },
-      { label: "STAKEHOLDER ALIGNMENT", self: 1.5, manager: 1.7, benchmark: 2,industrybenchmark  : 3 },
-      { label: "EFFECTIVE STORYTELLING", self: 1.53, manager: 1.8, benchmark: 2.5,industrybenchmark  : 3 },
-      { label: "MARKET ACCESS", self: 1, manager: 1.33, benchmark: 2 ,industrybenchmark  : 3},
-      { label: "PERSONALIZED MARKETING", self: 1.4, manager: 1.5, benchmark: 2.5,industrybenchmark  : 3 },
+  const skillsData = [
+      { label: "BUSINESS & FINANCIAL ACUMEN", self: 1.33, manager: 1, benchmark: 2,industrybenchmark  : 2.8 },
+      { label: "ANALYSIS TO INSIGHTS", self: 1.33, manager: 1, benchmark: 2,industrybenchmark  : 2.7 },
+      { label: "BRAND & PORTFOLIO VALUE", self: 1.67, manager: 1.6, benchmark: 2.5,industrybenchmark  : 2.65 },
+      { label: "STAKEHOLDER ALIGNMENT", self: 1.5, manager: 1.7, benchmark: 2,industrybenchmark  : 2.7 },
+      { label: "EFFECTIVE STORYTELLING", self: 1.53, manager: 1.8, benchmark: 2.5,industrybenchmark  : 2.6 },
+      { label: "MARKET ACCESS", self: 1, manager: 1.33, benchmark: 2 ,industrybenchmark  : 2.8},
+      { label: "PERSONALIZED MARKETING", self: 1.4, manager: 1.5, benchmark: 2.5,industrybenchmark  : 2.65 },
     ];
 
     const strengths = [
@@ -601,8 +601,8 @@ document.addEventListener('DOMContentLoaded', () => {
         data: { labels, datasets: [
           { label: 'Team Avg. Self', data: selfData, borderColor: '#8A2ECC', backgroundColor: 'rgba(138, 46, 204, 0.2)', pointBackgroundColor: '#8A2ECC' },
           { label: 'Team Avg. Manager', data: managerData, borderColor: '#071D49', backgroundColor: 'rgba(7, 29, 73, 0.2)', pointBackgroundColor: '#338700' },
-          { label: 'Role Benchmark', data: benchmarkData, borderColor: '#0066F5', backgroundColor: 'rgba(0, 102, 245, 0.2)', pointBackgroundColor: '#0066F5' },
-           { label: 'Industry Benchmark', data: industrybenchmarkData, borderColor: '#14532D ', backgroundColor: 'rgba(20, 83, 45, 0.2)', pointBackgroundColor: '#0066F5' }
+          { label: 'Role Benchmark', data: benchmarkData, borderColor: '#0066F5', pointStyle: 'rect',backgroundColor: 'rgba(0, 102, 245, 0.2)', pointBackgroundColor: '#0066F5' },
+           { label: 'Industry Benchmark', data: industrybenchmarkData, borderColor: '#14532D ',pointStyle: 'triangle', backgroundColor: 'rgba(20, 83, 45, 0.2)', pointBackgroundColor: '#14532D' }
         ]},
        options: {
   responsive: true,
