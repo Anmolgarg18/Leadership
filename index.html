@@ -603,10 +603,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   },
   plugins: {
-    legend: {
-      position: 'bottom'  // <--- Moves legend to the bottom
+  legend: {
+    position: 'bottom',
+    align: 'center',
+    labels: {
+      padding: 19 // space between legend items
     }
   }
+}
 }
 
       });
